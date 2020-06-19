@@ -18,7 +18,7 @@ def assign_rooms(attendees)
 #    attendees.each_with_index do |attendee, count|
 #      array2 << ("Hello, #{attendee}! You'll be assigned to room #{count}!")
 #      count += 1
-       attendees.each do |attendee|
+  attendees.each do |attendee|
      array2 << ("Hello, #{attendee}! You'll be assigned to room #{count}!")
      count += 1
    end
@@ -26,6 +26,9 @@ def assign_rooms(attendees)
 end
 
 def printer(attendees)
-puts batch_badge_creator(attendees)
-puts assign_rooms(attendees)
+    batch_badge_creator(attendees).each do |badge|
+      puts (badge)
+
+    assign_rooms(attendees).each do |room|
+      puts (room)
 end
